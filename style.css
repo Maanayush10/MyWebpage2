@@ -1,0 +1,250 @@
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: bebas neue;
+}
+nav{
+    background: #013d3ff6;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px, 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.home,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width: 952px){
+    label.logo{
+    font-size: 30px;
+    padding-left: 50px;           
+    }
+    a:hover, a.home{
+        background: none;
+        color: #0ad9e0f6;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background:#4f806f ;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.home{
+        background: none;
+        color: #013d3ff6;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+footer{
+    position: absolute;
+    bottom:0;
+    background: #013d3ff6;
+    height: auto;
+    width: 100vw;
+    font-family: "Rockwell";
+    padding-top: 5px;
+    color: white;
+  
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 10px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+
+}
+.footer-bottom{
+    background: #000000;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.grid{
+    display: grid;
+    width: 30rem;
+    grid-gap:4rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 3fr));
+    align-items: start;
+
+}
+.grid-item{
+    background-color:rgb(47, 112, 107) ;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.432);
+}
+.card-img{
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+.card-content{
+    padding: 0.7rem;
+}
+.card-header{
+    font-size: 2rem;
+    font-weight: 500;
+    color:  #272626;
+    margin-bottom:  1.5rem;
+}
+.card-text{
+    font-size: 1rem;
+    letter-spacing: 0.001rem;
+    line-height: 1.2;
+    color: rgb(39, 63, 45);
+    margin-bottom: 0.2rem;
+}
+.card-btn{
+    display: block;
+    width: 100%;
+    padding: 0.1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #17352d;
+    background-color: rgb(109, 219, 173);
+    border: none;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+.card-btn span{
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active{
+    background-color: rgb(245, 245, 245);
+}
+
+.card-btn:hover span,
+.card-btn:active span{
+    margin-left: 1.5rem;
+}
+
+@media only scree and (max-width: 60rem){
+    body{
+        padding: 3rem;
+    }
+    .grid{
+        grid-gap: 7rem;
+    }
+}
